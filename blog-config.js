@@ -7,7 +7,7 @@ module.exports = {
     github: "https://github.com/hyunolike",
   },
   utterances: {
-    repo: "devHudi/gatsby-starter-hoodie",
+    repo: "hyunolike/hyunolike.github.io",
     type: "pathname",
   },
 }
