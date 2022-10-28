@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://hyunolike.github.io/sitemap/sitemap-index.xml
+Host: https://hyunolike.github.io
