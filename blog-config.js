@@ -1,6 +1,6 @@
 module.exports = {
-  title: "현호의 기술블로그",
-  description: "Hello :)",
+  title: "Hyunho's log",
+  description: "프로젝트 기술 블로그입니다.",
   author: "Hyunho Jang",
   siteUrl: "https://hyunolike.github.io/",
   links: {
