@@ -41,7 +41,7 @@ klaytn API Service 이용해 블록체인 서비스를 간단한 API 호출로�
 
 아래는 klaytn API Service 간단한 구조입니다.
 
-![kas.png](../../../src/images/kas.png)
+![kas.png](./kas.png)
 
 
  
