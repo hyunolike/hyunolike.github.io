@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://hyunolike.github.io/gatsby-starter-hoodie/sitemap/sitemap-index.xml
+Sitemap: https://hyunolike.github.io/sitemap/sitemap-index.xml
 Host: https://hyunolike.github.io
