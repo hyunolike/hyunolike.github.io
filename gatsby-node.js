@@ -10,13 +10,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { frontmatter: { date: ASC } }
         limit: 1000
       ) {
         nodes {
           id
           fields {
             slug
+            readingTime
           }
           frontmatter {
             series
@@ -83,6 +84,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 }
 
+const readingTime = require("reading-time");
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
@@ -95,21 +98,35 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       value: newSlug,
     })
+
+    const stats = readingTime(node.rawMarkdownBody);
+    createNodeField({
+      node,
+      name: "readingTime",
+      value: stats.text, // 예: "3 min read"
+    });
   }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-  type MarkdownRemark implements Node {
-    frontmatter: Frontmatter!
-  }
-  type Frontmatter {
-    title: String!
-    description: String
-    tags: [String!]!
-    series: String
-  }
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+      fields: Fields
+    }
+
+    type Frontmatter {
+      title: String!
+      description: String
+      tags: [String!]!
+      series: String
+    }
+
+    type Fields {
+      slug: String!
+      readingTime: String
+    }
   `
   createTypes(typeDefs)
 }

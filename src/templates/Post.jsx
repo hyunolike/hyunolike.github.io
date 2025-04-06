@@ -41,7 +41,7 @@ const Post = ({ data }) => {
           date={date}
           update={update}
           tags={tags}
-          minToRead={Math.round(readingTime.minutes)}
+          minToRead={parseInt(readingTime)}
         />
         {filteredSeries.length > 0 && (
           <Article.Series header={series} series={filteredSeries} />
@@ -80,13 +80,11 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        readingTime {
-          minutes
-        }
+        readingTime
       }
     }
     seriesList: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: ASC } }
       filter: { frontmatter: { series: { eq: $series } } }
     ) {
       edges {
