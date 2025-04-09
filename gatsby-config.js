@@ -10,7 +10,7 @@ module.exports = {
     author,
     siteUrl,
   },
-  plugins: [h
+  plugins: [
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-robots-txt`,
     {
