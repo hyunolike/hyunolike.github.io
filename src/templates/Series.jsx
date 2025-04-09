@@ -53,8 +53,9 @@ const Date = styled.span`
   font-weight: lighter;
 `
 
-const Series = ({ pathContext, data }) => {
-  const seriesName = pathContext.series
+const Series = ({ pageContext, data }) => {
+  // Gatsby 최신 버전 적용
+  const seriesName = pageContext?.series || pageContext?.series
   const posts = data.posts.nodes
 
   return (
