@@ -20,11 +20,14 @@ const FooterWrapper = styled.footer`
 const Footer = () => {
   return (
     <FooterWrapper>
-      © {title}, Built with Gatsby and{" "}
-      <a href="https://github.com/devHudi/gatsby-starter-hoodie" target="blank">
-        gatsby-starter-hoodie
-      </a>{" "}
-      theme.
+      © 2025 {title} | 성장하는 주니어 개발자 Hyunho Jang
+      {/*© 2025 Hyunho's log */}
+      {/*,*/}
+      {/*Built with Gatsby and{" "}*/}
+      {/*<a href="https://github.com/devHudi/gatsby-starter-hoodie" target="blank">*/}
+      {/*  gatsby-starter-hoodie*/}
+      {/*</a>{" "}*/}
+      {/*theme.*/}
     </FooterWrapper>
   )
 }
