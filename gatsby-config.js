@@ -3,13 +3,14 @@ const { title, description, author, siteUrl } = blogConfig
 
 module.exports = {
   pathPrefix: "/gatsby-starter-hoodie",
+  assetPrefix: ".",
   siteMetadata: {
     title,
     description,
     author,
     siteUrl,
   },
-  plugins: [
+  plugins: [h
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-robots-txt`,
     {
