@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-series-jsx","path":"/series/새로운-시리즈/","result":{"data":{"posts":{"nodes":[{"excerpt":"","fields":{"slug":"/test-series/"},"frontmatter":{"date":"April 09, 2023","update":null,"title":"새 포스트 제목","tags":["태그1","태그2"]}}]}},"pageContext":{"series":"새로운 시리즈"}},"staticQueryHashes":[],"slicesMap":{}}
