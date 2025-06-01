@@ -3,7 +3,6 @@ const { title, description, author, siteUrl } = blogConfig
 
 module.exports = {
   pathPrefix: "/gatsby-starter-hoodie",
-  assetPrefix: ".",
   siteMetadata: {
     title,
     description,
